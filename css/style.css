@@ -4,12 +4,12 @@
 <--- -------------------------- -*/
 :root {
     /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
-    --primary: #ff6a3e;
-    --primaryLight: #ffba43;
-    --secondary: #ffba43;
-    --secondaryLight: #ffba43;
-    --headerColor: #1a1a1a;
-    --bodyTextColor: #4e4b66;
+    --primary: #219EBC;
+    --primaryLight: #8ECAE6;
+    --secondary: #FB8500;
+    --secondaryLight: #FFB703;
+    --headerColor: #023047;
+    --bodyTextColor: #023047;
     --bodyTextColorWhite: #fafbfc;
     /* 13px - 16px */
     --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
@@ -20,11 +20,33 @@
     --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
 }
 
+
+
+.ubuntu-bold {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+h1, h2, h3 {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+p {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+
+}
+
 body {
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
 }
 
 *, *:before, *:after {
@@ -68,14 +90,14 @@ body {
 <---     My Navigation Changes  -->
 <--- -------------------------- -*/
 .blue-line {
-    background-color: #2EC4B6 ;
+    background-color: #8ECAE6 ;
     width: auto;
     height: 10px;
 }
 
 .cs-logo {
     text-decoration: none;
-    color: #1a1a1a;
+    color: #219EBC;
     font-weight: bolder;
     font-size: 50px;
 }
@@ -588,7 +610,7 @@ body {
   @media only screen and (min-width: 64rem) {
     body.scroll #cs-navigation {
       /* 53px, the ssme height as the cs-top-container */
-      transform: translateY(-3.3125rem);
+      transform: translateY(-108px);
     }
     #cs-navigation {
       width: 100%;
@@ -786,17 +808,35 @@ body {
 Banner Image
 ***********************************/
 .banner-image {
-    width: auto;
-    
+    height: 500px;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0.4)), url(../images/pexels-gonchifacello-1432039.jpg);
+    background-position: 0px 10%;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 }
 
-.banner-image img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    object-position: 0px 10%;
+.banner-inner {
+  color: #ffffff;
+  text-align: center;
+  padding-bottom: 16px;
+  margin-top: 150px;
 }
 
+.banner-inner h1 {
+  font-size: 60px;
+  margin-bottom: 10px;
+  margin-top: 0;
+ 
+} 
+
+.banner-inner p {
+  font-size: 35px;
+  font-weight: 500;
+}
 /*-- -------------------------- -->
 <---   Side By Side Reverse     -->
 <--- -------------------------- -*/
@@ -1145,7 +1185,7 @@ Banner Image
       height: 100%;
       /* makes it act like a background image */
       object-fit: cover;
-      object-position: 10% 50%;
+      object-position: 10% 5%;
       position: absolute;
       top: 0;
       left: 0;
@@ -1359,7 +1399,11 @@ Banner Image
     overflow-x: auto;
   }
 }
-                                     
+     
+
+.cart {
+  margin-top: 24px;
+}
 /*-- -------------------------- -->
 <---          Reviews           -->
 <--- -------------------------- -*/
@@ -1864,5 +1908,51 @@ Banner Image
 }
                               
 
-                              
-                              
+   /* shopping cart  */
+.cart {
+  margin: 40px auto;
+  min-width: 865.656px;
+
+}
+
+.cart .cs-title {
+  text-align: center;
+}
+.cart-rows {
+  display:flex;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.cart-titles {
+  display: flex;
+  
+}        
+
+.shopping-cart {
+  padding: 0;
+}
+
+
+.name {
+  min-width: 600px;
+}
+
+.price {
+  min-width: 100px;
+}
+
+.quantity {
+  min-width: 100px;
+}
+
+.item-title {
+  min-width: 600px;
+}
+
+.price-title {
+  min-width: 100px;
+}
+.quantity-title {
+  min-width: 100px;
+}
