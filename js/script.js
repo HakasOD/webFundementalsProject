@@ -60,6 +60,30 @@ addToCartButtons.forEach((button) => {
 
 })
 
+// Remove all button 
+const removeAllButton = document.querySelector(".remove-all");
+
+removeAllButton.addEventListener("click", () => {
+	removeAllItems();
+	updateCartTotal();
+})
+
+
+//checkout button
+const checkoutButton = document.querySelector(".checkout");
+checkoutButton.addEventListener("click", () => {
+	//If there are no items in cart 
+	if (shoppingList.childNodes.length === 0) {
+		alert("No items in cart");
+		return;
+	} 
+	
+	alert("Thank you for your purchase!");	
+	removeAllItems();
+	updateCartTotal();
+})
+
+
 
 function addToCart(button){
 	const row = button.closest(".cs-tr");
@@ -93,6 +117,7 @@ function addToCart(button){
 	quantityDiv.classList.add("quantity");
 	quantityDiv.classList.add("column");
 
+	removeButton.classList.add("remove-button");
 
 	item.appendChild(nameDiv);
 	item.appendChild(priceDiv);
@@ -165,4 +190,12 @@ function updateCartTotal(){
 
 	document.querySelector(".cart span").textContent = "$" + total;
 
+}
+
+function removeAllItems(){
+	let item = shoppingList.lastElementChild;
+	while(item) {
+		shoppingList.removeChild(item);
+		item = shoppingList.lastElementChild;
+	}
 }

@@ -4,7 +4,7 @@
 <--- -------------------------- -*/
 :root {
     /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
-    --primary: #219EBC;
+    --primary: #0077b6;
     --primaryLight: #8ECAE6;
     --secondary: #FB8500;
     --secondaryLight: #FFB703;
@@ -810,7 +810,7 @@ Banner Image
 .banner-image {
     height: 500px;
     background-image:linear-gradient(rgba(0, 0, 0, 0.4),
-    rgba(0, 0, 0, 0.4)), url(../images/pexels-gonchifacello-1432039.jpg);
+    rgba(0, 0, 0, 0.4)), url(../images/optimising.jpg);
     background-position: 0px 10%;
     background-size: cover;
     display: flex;
@@ -962,7 +962,6 @@ Banner Image
       font-size: min(1.2vw, 1em);
       flex: none;
       /* sends it to the right in the 2nd position */
-      order: 2;
     }
   }
 
@@ -1313,9 +1312,6 @@ Banner Image
 /*-- -------------------------- -->
 <---           Table            -->
 <--- -------------------------- -*/
-#table-1669 {
-  background-color: #f7f7f7;
-}
 
 #table-1669 .table-image {
   width: 100%;
@@ -1420,7 +1416,7 @@ Banner Image
 @media only screen and (min-width: 0rem) {
   #reviews-1089 {
       padding: var(--sectionPadding);
-      /* background-color: #f7f7f7; */
+      background-color: #f7f7f7;
   }
   #reviews-1089 .cs-container {
       width: 100%;
@@ -1597,6 +1593,7 @@ Banner Image
   #reviews-1089 .cs-content {
       width: 50%;
       max-width: 25.8125rem;
+      order: 2;
   }
   #reviews-1089 .cs-card-group {
       max-width: 47.375rem;
@@ -1910,18 +1907,20 @@ Banner Image
 
    /* shopping cart  */
 .cart {
-  margin: 40px auto;
   min-width: 865.656px;
-
+  
 }
 
-.cart .cs-title {
-  text-align: center;
-}
+
 .cart-rows {
   display:flex;
-  justify-content: center;
   margin-bottom: 16px;
+}
+
+.cart-rows li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 .cart-titles {
@@ -1935,7 +1934,7 @@ Banner Image
 
 
 .name {
-  min-width: 600px;
+  min-width: 615px;
 }
 
 .price {
@@ -1943,16 +1942,126 @@ Banner Image
 }
 
 .quantity {
-  min-width: 100px;
+  min-width: 30px;
 }
 
 .item-title {
   min-width: 600px;
+
 }
 
 .price-title {
   min-width: 100px;
+
 }
 .quantity-title {
   min-width: 100px;
+  margin-right: 30px;
+
+}
+
+.cart .right-side {
+  margin-top: 30px;
+  margin-right: 35px;
+  font-size: large;
+  font-weight: bold;
+  text-align: right;
+}
+
+
+.remove-button {
+  background-color: var(--primary);
+  color: white;
+  font-size: medium;
+  border: none;
+  padding: 5px 12px;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.remove-button:hover {
+  transition: 0.2s ease-in;
+  filter: brightness(90%);
+}
+
+.cs-table button {
+  background-color: lightgray;
+  color: var(--headerColor);
+  border: none;
+  font-weight: bold;
+  border-radius: 10px;
+  padding: 5px 12px;
+
+}
+
+.cs-table button:hover {
+  transition: 0.1s ease-in-out;
+  filter: brightness(90%);
+}
+
+.cs-table button:active{
+  transform: scale(97%);
+}
+
+.cart button:active{
+  transform: scale(97%);
+}
+.remove-all {
+  background-color: var(--secondaryLight);
+  color: var(--headerColor);
+  font-size: medium;
+  border: none;
+  padding: 5px 12px;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.remove-all:hover {
+  transition: 0.1s ease-in-out;
+  filter: brightness(90%);
+}
+
+.checkout {
+  display: block; 
+  margin-left: auto;
+  margin-top: 18px;
+  background-color: var(--secondaryLight);
+  color: var(--headerColor);
+  font-size: medium;
+  border: none;
+  padding: 5px 12px;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 10px;
+  width: 107px;
+  
+}
+
+.shopping-cart-image  {
+  margin-top: 100px;
+  margin-left: 150px;
+  width: auto;
+  height: 200px;
+}
+
+.cart-container {
+  display: flex;
+  margin-top: 40px;
+}
+
+.quotes {
+  width: 52px;
+  height: auto;
+}
+
+.face {
+  width: 112px;
+  height: 112px;
+}
+
+.google-map {
+  width:600px ;
+  height:450px ;
 }
